@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dom4j"
+        default="package-all">
+
+    <property name="src"
+            location="src"/>
+    <property name="build"
+            location="build"/>
+    <property name="lib"
+            location="lib"/>
+    <property name="build.jar"
+            location="${build}/${ant.project.name}.jar"/>
+    <property name="src.zip"
+            location="${build}/${ant.project.name}-src.zip"/>
+
+    <target name="-compile">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${build}/classes"/>
+
+        <javac target="1.6"
+                source="1.6"
+                destdir="${build}/classes"
+                srcdir="${src}"
+                failonerror="on"
+                encoding="UTF-8"
+                includeantruntime="off"
+                verbose="on">
+            <classpath>
+                <fileset dir="${lib}">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="clean">
+        <delete verbose="on"
+                dir="${build}"
+                failonerror="on"
+                includeemptydirs="on"
+                includes="**/*"
+                />
+    </target>
+
+    <target name="package"
+            depends="-compile">
+        <jar destfile="${build.jar}">
+            <fileset dir="${build}/classes"
+                    includes="**/*.class"/>
+            <zipgroupfileset dir="${lib}"
+                    includes="**/*"/>
+        </jar>
+    </target>
+
+    <target name="package-all"
+            depends="package">
+        <zip destfile="${src.zip}">
+            <fileset dir="${src}"
+                    includes="**/*.java"/>
+        </zip>
+    </target>
+
+</project>
