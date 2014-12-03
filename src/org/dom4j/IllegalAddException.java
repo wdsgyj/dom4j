@@ -10,7 +10,7 @@ package org.dom4j;
 /**
  * <p>
  * <code>IllegalAddException</code> is thrown when a node is added incorrectly
- * to an <code>{@link Element}</code>
+ * to an <code>{@link org.dom4j.Element}</code>
  * </p>
  * 
  * @version $Revision: 1.6 $

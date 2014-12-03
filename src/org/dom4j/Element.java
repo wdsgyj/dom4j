@@ -377,7 +377,7 @@ public interface Element extends Branch {
     /**
      * Removes the given <code>CDATA</code> if the node is an immediate child
      * of this element. If the given node is not an immediate child of this
-     * element then the {@link Node#detach()}method should be used instead.
+     * element then the {@link org.dom4j.Node#detach()}method should be used instead.
      * 
      * @param cdata
      *            is the CDATA to be removed
@@ -389,7 +389,7 @@ public interface Element extends Branch {
     /**
      * Removes the given <code>Entity</code> if the node is an immediate child
      * of this element. If the given node is not an immediate child of this
-     * element then the {@link Node#detach()}method should be used instead.
+     * element then the {@link org.dom4j.Node#detach()}method should be used instead.
      * 
      * @param entity
      *            is the entity to be removed
@@ -401,7 +401,7 @@ public interface Element extends Branch {
     /**
      * Removes the given <code>Namespace</code> if the node is an immediate
      * child of this element. If the given node is not an immediate child of
-     * this element then the {@link Node#detach()}method should be used
+     * this element then the {@link org.dom4j.Node#detach()}method should be used
      * instead.
      * 
      * @param namespace
@@ -414,7 +414,7 @@ public interface Element extends Branch {
     /**
      * Removes the given <code>Text</code> if the node is an immediate child
      * of this element. If the given node is not an immediate child of this
-     * element then the {@link Node#detach()}method should be used instead.
+     * element then the {@link org.dom4j.Node#detach()}method should be used instead.
      * 
      * @param text
      *            is the text to be removed
@@ -428,8 +428,8 @@ public interface Element extends Branch {
 
     /**
      * Returns the text value of this element without recursing through child
-     * elements. This method iterates through all {@link Text},{@link CDATA}
-     * and {@link Entity}nodes that this element contains and appends the text
+     * elements. This method iterates through all {@link org.dom4j.Text},{@link org.dom4j.CDATA}
+     * and {@link org.dom4j.Entity}nodes that this element contains and appends the text
      * values together.
      * 
      * @return the textual content of this Element. Child elements are not
@@ -449,8 +449,8 @@ public interface Element extends Branch {
      * Returns the XPath string-value of this node. The behaviour of this method
      * is defined in the <a href="http://www.w3.org/TR/xpath">XPath
      * specification </a>. This method returns the string-value of all the
-     * contained {@link Text},{@link CDATA},{@link Entity}and {@link
-     * Element} nodes all appended together.
+     * contained {@link org.dom4j.Text},{@link org.dom4j.CDATA},{@link org.dom4j.Entity}and {@link
+     * org.dom4j.Element} nodes all appended together.
      * 
      * @return the text from all the child Text and Element nodes appended
      *         together.
@@ -643,7 +643,7 @@ public interface Element extends Branch {
      *            is the attribute's value
      * 
      * @deprecated As of version 0.5. Please use {@link
-     *             #addAttribute(QName,String)} instead. WILL BE REMOVED IN
+     *             #addAttribute(org.dom4j.QName,String)} instead. WILL BE REMOVED IN
      *             dom4j-1.6 !!
      */
     void setAttributeValue(QName qName, String value);

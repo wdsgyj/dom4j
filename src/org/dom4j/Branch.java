@@ -32,7 +32,7 @@ public interface Branch extends Node {
      * 
      * @throws IndexOutOfBoundsException
      *             if the index is out of range (index &lt; 0 || index &gt;=
-     *             {@link Branch#nodeCount()}).
+     *             {@link org.dom4j.Branch#nodeCount()}).
      */
     Node node(int index) throws IndexOutOfBoundsException;
 
@@ -168,7 +168,7 @@ public interface Branch extends Node {
     Element addElement(String name);
 
     /**
-     * Adds a new <code>Element</code> node with the given {@link QName}to
+     * Adds a new <code>Element</code> node with the given {@link org.dom4j.QName}to
      * this branch and returns a reference to the new node.
      * 
      * @param qname
@@ -245,7 +245,7 @@ public interface Branch extends Node {
     /**
      * Removes the given <code>Node</code> if the node is an immediate child
      * of this branch. If the given node is not an immediate child of this
-     * branch then the {@link Node#detach()}method should be used instead. This
+     * branch then the {@link org.dom4j.Node#detach()}method should be used instead. This
      * is a polymorphic method which will call the typesafe method for the node
      * type such as remove(Element) or remove(Comment).
      * 
@@ -259,7 +259,7 @@ public interface Branch extends Node {
     /**
      * Removes the given <code>Comment</code> if the node is an immediate
      * child of this branch. If the given node is not an immediate child of this
-     * branch then the {@link Node#detach()}method should be used instead.
+     * branch then the {@link org.dom4j.Node#detach()}method should be used instead.
      * 
      * @param comment
      *            is the comment to be removed
@@ -271,7 +271,7 @@ public interface Branch extends Node {
     /**
      * Removes the given <code>Element</code> if the node is an immediate
      * child of this branch. If the given node is not an immediate child of this
-     * branch then the {@link Node#detach()}method should be used instead.
+     * branch then the {@link org.dom4j.Node#detach()}method should be used instead.
      * 
      * @param element
      *            is the element to be removed
@@ -283,7 +283,7 @@ public interface Branch extends Node {
     /**
      * Removes the given <code>ProcessingInstruction</code> if the node is an
      * immediate child of this branch. If the given node is not an immediate
-     * child of this branch then the {@link Node#detach()}method should be used
+     * child of this branch then the {@link org.dom4j.Node#detach()}method should be used
      * instead.
      * 
      * @param pi

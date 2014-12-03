@@ -52,7 +52,7 @@ public interface XPath extends NodeFilter {
      * <p>
      * <code>evaluate</code> evaluates an XPath expression and returns the
      * result as an {@link Object}. The object returned can either be a {@link
-     * java.util.List} of {@link Node}instances, a {@link Node}instance, a {@link
+     * java.util.List} of {@link org.dom4j.Node}instances, a {@link org.dom4j.Node}instance, a {@link
      * String} or a {@link Number}instance depending on the XPath expression.
      * </p>
      * 
@@ -61,7 +61,7 @@ public interface XPath extends NodeFilter {
      *            XPath
      * 
      * @return the value of the XPath expression as a {@link java.util.List}of {@link
-     *         Node} instances, a {@link Node}instance, a {@link String}or a
+     *         org.dom4j.Node} instances, a {@link org.dom4j.Node}instance, a {@link String}or a
      *         {@link Number}instance depending on the XPath expression.
      */
     Object evaluate(Object context);
@@ -70,7 +70,7 @@ public interface XPath extends NodeFilter {
      * <p>
      * <code>selectObject</code> evaluates an XPath expression and returns the
      * result as an {@link Object}. The object returned can either be a {@link
-     * java.util.List} of {@link Node}instances, a {@link Node}instance, a {@link
+     * java.util.List} of {@link org.dom4j.Node}instances, a {@link org.dom4j.Node}instance, a {@link
      * String} or a {@link Number}instance depending on the XPath expression.
      * </p>
      * 
@@ -79,7 +79,7 @@ public interface XPath extends NodeFilter {
      *            XPath
      * 
      * @return the value of the XPath expression as a {@link java.util.List}of {@link
-     *         Node} instances, a {@link Node}instance, a {@link String}or a
+     *         org.dom4j.Node} instances, a {@link org.dom4j.Node}instance, a {@link String}or a
      *         {@link Number}instance depending on the XPath expression.
      * 
      * @deprecated please use evaluate(Object) instead. WILL BE REMOVED IN
@@ -90,7 +90,7 @@ public interface XPath extends NodeFilter {
     /**
      * <p>
      * <code>selectNodes</code> performs this XPath expression on the given
-     * {@link Node}or {@link java.util.List}of {@link Node}s instances appending all
+     * {@link org.dom4j.Node}or {@link java.util.List}of {@link org.dom4j.Node}s instances appending all
      * the results together into a single list.
      * </p>
      * 
@@ -105,7 +105,7 @@ public interface XPath extends NodeFilter {
     /**
      * <p>
      * <code>selectNodes</code> evaluates the XPath expression on the given
-     * {@link Node}or {@link java.util.List}of {@link Node}s and returns the result as
+     * {@link org.dom4j.Node}or {@link java.util.List}of {@link org.dom4j.Node}s and returns the result as
      * a <code>List</code> of <code>Node</code> s sorted by the sort XPath
      * expression.
      * </p>
@@ -123,7 +123,7 @@ public interface XPath extends NodeFilter {
     /**
      * <p>
      * <code>selectNodes</code> evaluates the XPath expression on the given
-     * {@link Node}or {@link java.util.List}of {@link Node}s and returns the result as
+     * {@link org.dom4j.Node}or {@link java.util.List}of {@link org.dom4j.Node}s and returns the result as
      * a <code>List</code> of <code>Node</code> s sorted by the sort XPath
      * expression.
      * </p>
@@ -145,7 +145,7 @@ public interface XPath extends NodeFilter {
     /**
      * <p>
      * <code>selectSingleNode</code> evaluates this XPath expression on the
-     * given {@link Node}or {@link java.util.List}of {@link Node}s and returns the
+     * given {@link org.dom4j.Node}or {@link java.util.List}of {@link org.dom4j.Node}s and returns the
      * result as a single <code>Node</code> instance.
      * </p>
      * 

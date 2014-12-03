@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
  * 
  * @author Wonne Keysers (Realsoftware.be)
  * 
- * @see org.dom4j.io.SAXContentHandler
+ * @see SAXContentHandler
  */
 class SAXModifyContentHandler extends SAXContentHandler {
     private XMLWriter xmlWriter;

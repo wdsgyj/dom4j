@@ -11,7 +11,7 @@ import org.dom4j.Element;
 
 /**
  * ElementModifier defines a modifier of {@link org.dom4j.Element}objects. <br>
- * It can be used in the event based {@link org.dom4j.io.SAXModifier}, in order
+ * It can be used in the event based {@link SAXModifier}, in order
  * to modify elements on the fly, rather than waiting until the complete
  * document is parsed.
  * 

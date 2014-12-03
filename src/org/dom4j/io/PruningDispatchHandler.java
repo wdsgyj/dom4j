@@ -10,7 +10,7 @@ package org.dom4j.io;
 import org.dom4j.ElementPath;
 
 /**
- * This extension on the {@link DispatchHandler}prunes the current {@link
+ * This extension on the {@link org.dom4j.io.DispatchHandler}prunes the current {@link
  * org.dom4j.Element} when there are no {@link ElementHandler}objects active
  * the element.
  * 

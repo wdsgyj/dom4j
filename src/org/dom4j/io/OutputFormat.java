@@ -77,6 +77,10 @@ public class OutputFormat implements Cloneable {
     /** Quote character to use when writing attributes. */
     private char attributeQuoteChar = '\"';
 
+    private boolean newLineAfterAttribute = false;
+    private boolean newLineAfterNamespace = false;
+    private boolean newLineBwtweenTags = true;
+
     /**
      * Creates an <code>OutputFormat</code> with no additional whitespace
      * (indent or new lines) added. The whitespace from the element text content
@@ -476,6 +480,30 @@ public class OutputFormat implements Cloneable {
         }
     }
 
+    public boolean isNewLineAfterAttribute() {
+        return newLineAfterAttribute;
+    }
+
+    public void setNewLineAfterAttribute(boolean newLineAfterAttribute) {
+        this.newLineAfterAttribute = newLineAfterAttribute;
+    }
+
+    public boolean isNewLineAfterNamespace() {
+        return newLineAfterNamespace;
+    }
+
+    public void setNewLineAfterNamespace(boolean newLineAfterNamespace) {
+        this.newLineAfterNamespace = newLineAfterNamespace;
+    }
+
+    public boolean isNewLineBwtweenTags() {
+        return newLineBwtweenTags;
+    }
+
+    public void setNewLineBwtweenTags(boolean newLineBwtweenTags) {
+        this.newLineBwtweenTags = newLineBwtweenTags;
+    }
+
     /**
      * Parses command line arguments of the form <code>-omitEncoding
      * -indentSize 3 -newlines -trimText</code>
@@ -528,10 +556,13 @@ public class OutputFormat implements Cloneable {
      */
     public static OutputFormat createPrettyPrint() {
         OutputFormat format = new OutputFormat();
-        format.setIndentSize(2);
+        format.setIndentSize(4);
         format.setNewlines(true);
         format.setTrimText(true);
         format.setPadText(true);
+        format.setNewLineAfterNamespace(true);
+        format.setNewLineAfterAttribute(true);
+        format.setNewLineBwtweenTags(true);
 
         return format;
     }

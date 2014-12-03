@@ -387,7 +387,7 @@ public interface Node extends Cloneable {
      * <p>
      * <code>selectObject</code> evaluates an XPath expression and returns the
      * result as an {@link Object}. The object returned can either be a {@link
-     * java.util.List} of one or more {@link Node}instances or a scalar object like a
+     * java.util.List} of one or more {@link org.dom4j.Node}instances or a scalar object like a
      * {@link String}or a {@link Number}instance depending on the XPath
      * expression.
      * </p>
@@ -396,7 +396,7 @@ public interface Node extends Cloneable {
      *            is the XPath expression to be evaluated
      * 
      * @return the value of the XPath expression as a {@link java.util.List}of {@link
-     *         Node} instances, a {@link String}or a {@link Number}instance
+     *         org.dom4j.Node} instances, a {@link String}or a {@link Number}instance
      *         depending on the XPath expression.
      */
     Object selectObject(String xpathExpression);

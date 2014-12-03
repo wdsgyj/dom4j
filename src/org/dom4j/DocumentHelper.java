@@ -179,7 +179,7 @@ public final class DocumentHelper {
     /**
      * <p>
      * <code>selectNodes</code> performs the given XPath expression on the
-     * {@link java.util.List}of {@link Node}instances appending all the results together
+     * {@link java.util.List}of {@link org.dom4j.Node}instances appending all the results together
      * into a single list.
      * </p>
      * 
@@ -199,7 +199,7 @@ public final class DocumentHelper {
     /**
      * <p>
      * <code>selectNodes</code> performs the given XPath expression on the
-     * {@link java.util.List}of {@link Node}instances appending all the results together
+     * {@link java.util.List}of {@link org.dom4j.Node}instances appending all the results together
      * into a single list.
      * </p>
      * 

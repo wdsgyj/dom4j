@@ -76,7 +76,7 @@ public interface Attribute extends Node {
      * </p>
      * 
      * <p>
-     * This will be the same as the value returned from {@link Node#getName()}
+     * This will be the same as the value returned from {@link org.dom4j.Node#getName()}
      * if this element has no namespace attached to this element or an
      * expression of the form
      * 
@@ -94,7 +94,7 @@ public interface Attribute extends Node {
     /**
      * <p>
      * Returns the value of the attribute. This method returns the same value as
-     * the {@link Node#getText()}method.
+     * the {@link org.dom4j.Node#getText()}method.
      * </p>
      * 
      * @return the value of the attribute
@@ -116,7 +116,7 @@ public interface Attribute extends Node {
      * <p>
      * Accesses the data of this attribute which may implement data typing
      * bindings such as <code>XML Schema</code> or <code>Java Bean</code>
-     * bindings or will return the same value as {@link Node#getText()}.
+     * bindings or will return the same value as {@link org.dom4j.Node#getText()}.
      * </p>
      * 
      * @return the attribute data
@@ -126,7 +126,7 @@ public interface Attribute extends Node {
     /**
      * <p>
      * Sets the data value of this attribute if this element supports data
-     * binding or calls {@link Node#setText(String)}if it doesn't.
+     * binding or calls {@link org.dom4j.Node#setText(String)}if it doesn't.
      * </p>
      * 
      * @param data

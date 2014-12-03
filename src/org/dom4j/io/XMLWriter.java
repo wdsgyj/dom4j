@@ -7,18 +7,6 @@
 
 package org.dom4j.io;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-
 import org.dom4j.Attribute;
 import org.dom4j.CDATA;
 import org.dom4j.Comment;
@@ -31,7 +19,6 @@ import org.dom4j.Node;
 import org.dom4j.ProcessingInstruction;
 import org.dom4j.Text;
 import org.dom4j.tree.NamespaceStack;
-
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.Locator;
@@ -41,6 +28,18 @@ import org.xml.sax.SAXNotSupportedException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.ext.LexicalHandler;
 import org.xml.sax.helpers.XMLFilterImpl;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  * <p>
@@ -900,6 +899,10 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
         int size = element.nodeCount();
         String qualifiedName = element.getQualifiedName();
 
+        if (format.isNewLineBwtweenTags()) {
+            writePrintln();
+        }
+
         writePrintln();
         indent();
 
@@ -1204,12 +1207,18 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
      */
     protected void writeNamespace(String prefix, String uri) 
             throws IOException {
+        if (format.isNewLineAfterNamespace()) {
+            writePrintln();
+            indentLevel++;
+            indent();
+            indentLevel--;
+        }
         if ((prefix != null) && (prefix.length() > 0)) {
-            writer.write(" xmlns:");
+            writer.write("xmlns:");
             writer.write(prefix);
             writer.write("=\"");
         } else {
-            writer.write(" xmlns=\"");
+            writer.write("xmlns=\"");
         }
 
         writer.write(uri);
@@ -1482,7 +1491,14 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
                 }
             } else {
                 char quote = format.getAttributeQuoteCharacter();
-                writer.write(" ");
+                if (format.isNewLineAfterAttribute()) {
+                    writePrintln();
+                    indentLevel++;
+                    indent();
+                    indentLevel--;
+                } else {
+                    writer.write(" ");
+                }
                 writer.write(attribute.getQualifiedName());
                 writer.write("=");
                 writer.write(quote);
@@ -1493,7 +1509,14 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
     }
 
     protected void writeAttribute(Attribute attribute) throws IOException {
-        writer.write(" ");
+        if (format.isNewLineAfterAttribute()) {
+            writePrintln();
+            indentLevel++;
+            indent();
+            indentLevel--;
+        } else {
+            writer.write(" ");
+        }
         writer.write(attribute.getQualifiedName());
         writer.write("=");
 
@@ -1515,7 +1538,14 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
     protected void writeAttribute(Attributes attributes, int index)
             throws IOException {
         char quote = format.getAttributeQuoteCharacter();
-        writer.write(" ");
+        if (format.isNewLineAfterAttribute()) {
+            writePrintln();
+            indentLevel++;
+            indent();
+            indentLevel--;
+        } else {
+            writer.write(" ");
+        }
         writer.write(attributes.getQName(index));
         writer.write("=");
         writer.write(quote);
@@ -1601,7 +1631,7 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
                 writer.write("?>");
             }
 
-            if (format.isNewLineAfterDeclaration()) {
+            if (format.isNewLineAfterDeclaration() && !format.isNewLineBwtweenTags()) {
                 println();
             }
         }

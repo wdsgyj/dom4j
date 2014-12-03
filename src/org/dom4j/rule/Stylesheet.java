@@ -152,7 +152,7 @@ public class Stylesheet {
      *            the xpath expression
      * @throws Exception
      *             if something goes wrong
-     * @deprecated Use {@link Stylesheet#applyTemplates(Object, XPath)}instead.
+     * @deprecated Use {@link org.dom4j.rule.Stylesheet#applyTemplates(Object, XPath)}instead.
      */
     public void applyTemplates(Object input, org.jaxen.XPath xpath)
             throws Exception {
@@ -171,7 +171,7 @@ public class Stylesheet {
      *            the mode
      * @throws Exception
      *             if something goes wrong
-     * @deprecated Use {@link Stylesheet#applyTemplates(Object, XPath, String)}
+     * @deprecated Use {@link org.dom4j.rule.Stylesheet#applyTemplates(Object, XPath, String)}
      *             instead.
      */
     public void applyTemplates(Object input, org.jaxen.XPath xpath, String mode)

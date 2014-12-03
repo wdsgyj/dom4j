@@ -33,13 +33,13 @@ import org.xml.sax.XMLReader;
  * </p>
  * 
  * <p>
- * The modified document is written when the {@link XMLWriter}is specified.
+ * The modified document is written when the {@link org.dom4j.io.XMLWriter}is specified.
  * </p>
  * 
  * @author Wonne Keysers (Realsoftware.be)
  * 
- * @see org.dom4j.io.SAXReader
- * @see org.dom4j.io.XMLWriter
+ * @see SAXReader
+ * @see XMLWriter
  */
 public class SAXModifier {
     private XMLWriter xmlWriter;
@@ -102,7 +102,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.io.File}and writes it to the
-     * specified {@link XMLWriter}using SAX. Registered {@linkElementModifier}
+     * specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@linkElementModifier}
      * objects are invoked on the fly.
      * 
      * @param source
@@ -125,7 +125,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link org.xml.sax.InputSource}and
-     * writes it to the specified {@link XMLWriter}using SAX. Registered
+     * writes it to the specified {@link org.dom4j.io.XMLWriter}using SAX. Registered
      * {@link ElementModifier}objects are invoked on the fly.
      * 
      * @param source
@@ -148,7 +148,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.io.InputStream}and writes it
-     * to the specified {@link XMLWriter}using SAX. Registered {@link
+     * to the specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@link
      * ElementModifier} objects are invoked on the fly.
      * 
      * @param source
@@ -171,7 +171,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.io.InputStream}and writes it
-     * to the specified {@link XMLWriter}using SAX. Registered {@link
+     * to the specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@link
      * ElementModifier} objects are invoked on the fly.
      * 
      * @param source
@@ -197,7 +197,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.io.Reader}and writes it to
-     * the specified {@link XMLWriter}using SAX. Registered {@link
+     * the specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@link
      * ElementModifier} objects are invoked on the fly.
      * 
      * @param source
@@ -220,7 +220,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.io.Reader}and writes it to
-     * the specified {@link XMLWriter}using SAX. Registered {@link
+     * the specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@link
      * ElementModifier} objects are invoked on the fly.
      * 
      * @param source
@@ -246,7 +246,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given {@link java.net.URL}and writes it to the
-     * specified {@link XMLWriter}using SAX. Registered {@linkElementModifier}
+     * specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@linkElementModifier}
      * objects are invoked on the fly.
      * 
      * @param source
@@ -269,7 +269,7 @@ public class SAXModifier {
 
     /**
      * Reads a Document from the given URL or filename and writes it to the
-     * specified {@link XMLWriter}using SAX. Registered {@linkElementModifier}
+     * specified {@link org.dom4j.io.XMLWriter}using SAX. Registered {@linkElementModifier}
      * objects are invoked on the fly.
      * 
      * @param source
@@ -347,7 +347,7 @@ public class SAXModifier {
     }
 
     /**
-     * Returns the current {@link XMLWriter}.
+     * Returns the current {@link org.dom4j.io.XMLWriter}.
      * 
      * @return XMLWriter
      */
@@ -356,7 +356,7 @@ public class SAXModifier {
     }
 
     /**
-     * Sets the {@link XMLWriter}used to write the modified document.
+     * Sets the {@link org.dom4j.io.XMLWriter}used to write the modified document.
      * 
      * @param writer
      *            The writer to use.

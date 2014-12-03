@@ -14,12 +14,12 @@ import org.dom4j.ElementPath;
 
 /**
  * This {@link org.dom4j.ElementHandler}is used to trigger {@link
- * ElementModifier} objects in order to modify (parts of) the Document on the
+ * org.dom4j.io.ElementModifier} objects in order to modify (parts of) the Document on the
  * fly.
  * 
  * <p>
  * When an element is completely parsed, a copy is handed to the associated (if
- * any) {@link ElementModifier}that on his turn returns the modified element
+ * any) {@link org.dom4j.io.ElementModifier}that on his turn returns the modified element
  * that has to come in the tree.
  * </p>
  * 

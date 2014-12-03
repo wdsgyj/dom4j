@@ -10,7 +10,7 @@ package org.dom4j;
 /**
  * This interface is used by {@link ElementHandler}instances to retrieve
  * information about the current path hierarchy they are to process. It's
- * primary use is to retrieve the current {@link Element}being processed.
+ * primary use is to retrieve the current {@link org.dom4j.Element}being processed.
  * 
  * @author <a href="mailto:dwhite@equipecom.com">Dave White </a>
  * @version $Revision: 1.6 $

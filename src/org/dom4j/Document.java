@@ -21,7 +21,7 @@ import org.xml.sax.EntityResolver;
  */
 public interface Document extends Branch {
     /**
-     * Returns the root {@link Element}for this document.
+     * Returns the root {@link org.dom4j.Element}for this document.
      * 
      * @return the root element for this document
      */

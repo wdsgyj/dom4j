@@ -7,6 +7,13 @@
 
 package org.dom4j.io;
 
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.Entity;
+import org.dom4j.Node;
+import org.xml.sax.SAXException;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringWriter;
@@ -16,14 +23,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.Stack;
-
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
-import org.dom4j.Entity;
-import org.dom4j.Node;
-
-import org.xml.sax.SAXException;
 
 /**
  * <p>

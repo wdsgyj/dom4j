@@ -143,7 +143,7 @@ public class RuleManager {
     // -------------------------------------------------------------------------
 
     /**
-     * A factory method to return a new {@link Mode}instance which should add
+     * A factory method to return a new {@link org.dom4j.rule.Mode}instance which should add
      * the necessary default rules
      * 
      * @return DOCUMENT ME!
@@ -156,7 +156,7 @@ public class RuleManager {
     }
 
     /**
-     * Adds the default stylesheet rules to the given {@link Mode}instance
+     * Adds the default stylesheet rules to the given {@link org.dom4j.rule.Mode}instance
      * 
      * @param mode
      *            DOCUMENT ME!

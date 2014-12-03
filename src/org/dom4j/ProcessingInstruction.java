@@ -12,8 +12,8 @@ import java.util.Map;
 /**
  * <p>
  * <code>ProcessingInstruction</code> defines an XML processing instruction.
- * The {@link Node#getName}method will return the target of the PI and the
- * {@link Node#getText}method will return the data from all of the
+ * The {@link org.dom4j.Node#getName}method will return the target of the PI and the
+ * {@link org.dom4j.Node#getText}method will return the data from all of the
  * instructions.
  * </p>
  * 
