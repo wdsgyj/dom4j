@@ -1212,6 +1212,8 @@ public class XMLWriter extends XMLFilterImpl implements LexicalHandler {
             indentLevel++;
             indent();
             indentLevel--;
+        } else {
+            writer.write(" ");
         }
         if ((prefix != null) && (prefix.length() > 0)) {
             writer.write("xmlns:");
